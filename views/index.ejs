@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+
+<html lang="ar">
+    <%- include("./partials/head.ejs")  %> 
+
+
+<body id="body">
+
+
+<%- include("./partials/header.ejs")  %> 
+
+
+
+    <main id="main">
+        <section>
+            <h1>
+                Trending Articles &#128293;
+            </h1>
+
+            <div class="parent-of-articles">
+                <% articlesArray.forEach(item =>{ %>
+                
+                
+                    <article>
+                        <h2>
+                            <%= item.title %>
+                        </h2>
+    
+    
+                        <p>
+                            HTML is the standard markup language for Web pages...
+    
+    
+                            <a class="btn" href="/articles/<%- item._id %> ">show more</a>
+                        </p>
+                    </article>
+                
+                
+                
+              <%  }); %>
+
+
+            
+
+               
+
+
+            </div>
+
+
+        </section>
+
+
+
+    </main>
+
+ 
+
+
+<%- include("./partials/footer.ejs")  %> 
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+
+<html lang="ar">
+
+<!-- <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= myTiTle  %> </title>
+
+
+    
+    <link rel="stylesheet" href="styles.css" />
+
+    <script defer src="main.js"></script>
+</head> -->
+<%- include("./partials/head.ejs")  %> 
+
+<body id="body">
+<%- include("./partials/header.ejs")  %> 
+
+
+
+
+
+    <main id="main">
+
+        <section>
+            <h1>
+                Create new article
+            </h1>
+
+<form method="POST" action="/all-articles">
+    <label for="title">Article title: </label>
+    <input id="title" type="text" name="title" >
+
+
+
+    <label for="summary">Article summary: </label>
+    <input id="summary" type="text" name="summary">
+
+
+
+    <label for="body">Article body:</label>
+    <textarea   id="body" name="body" ></textarea>
+
+
+    <button class="create">create</button>
+</form>
+
+
+
+        </section>
+        
+        
+
+    </main>
+
+  
+
+    <%- include("./partials/footer.ejs")  %> 
+
+
+
+</body>
+
+</html>
